@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D0DB073C-FB44-421C-A360-7546DD9C2DFF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3CF4D24F-51FF-490E-9B80-1561DC6F3698"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App/Network/HTTPNetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getWithParametres(url:parameters:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3CF4D24F-51FF-490E-9B80-1561DC6F3698 - 5636cb09257dec2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for App.HTTPNetworkService.getWithParametres&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(url: Foundation.URL, parameters: Swift.Encodable) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itsnightwatcher/Documents/iOS/App/App/Network/HTTPNetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "844">
+               </Location>
+               <Location
+                  uuid = "3CF4D24F-51FF-490E-9B80-1561DC6F3698 - 5636cb09257def8a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for App.HTTPNetworkService.getWithParametres&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(url: Foundation.URL, parameters: Swift.Encodable) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itsnightwatcher/Documents/iOS/App/App/Network/HTTPNetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "844">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2DD45128-A652-4591-A5A6-09C8A7AB160D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App/Network/HTTPNetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "getWithParametres(url:parameters:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2DD45128-A652-4591-A5A6-09C8A7AB160D - 5636cb09257decef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for App.HTTPNetworkService.getWithParametres&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(url: Foundation.URL, parameters: Swift.Encodable) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itsnightwatcher/Documents/iOS/App/App/Network/HTTPNetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1284">
+               </Location>
+               <Location
+                  uuid = "2DD45128-A652-4591-A5A6-09C8A7AB160D - 5636cb09257dec4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for App.HTTPNetworkService.getWithParametres&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(url: Foundation.URL, parameters: Swift.Encodable) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itsnightwatcher/Documents/iOS/App/App/Network/HTTPNetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1284">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68C6B7C6-9747-4537-BBA2-ADAA4E3C4D77"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App/Network/HTTPNetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "getWithParametres(url:parameters:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "68C6B7C6-9747-4537-BBA2-ADAA4E3C4D77 - 5636cb09257decd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for App.HTTPNetworkService.getWithParametres&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(url: Foundation.URL, parameters: Swift.Encodable) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itsnightwatcher/Documents/iOS/App/App/Network/HTTPNetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "68C6B7C6-9747-4537-BBA2-ADAA4E3C4D77 - 5636cb09257decd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for App.HTTPNetworkService.getWithParametres&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(url: Foundation.URL, parameters: Swift.Encodable) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itsnightwatcher/Documents/iOS/App/App/Network/HTTPNetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "448">
+               </Location>
+               <Location
+                  uuid = "68C6B7C6-9747-4537-BBA2-ADAA4E3C4D77 - 5636cb09257dec2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for App.HTTPNetworkService.getWithParametres&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(url: Foundation.URL, parameters: Swift.Encodable) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itsnightwatcher/Documents/iOS/App/App/Network/HTTPNetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "68C6B7C6-9747-4537-BBA2-ADAA4E3C4D77 - 5636cb09257dec2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for App.HTTPNetworkService.getWithParametres&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(url: Foundation.URL, parameters: Swift.Encodable) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itsnightwatcher/Documents/iOS/App/App/Network/HTTPNetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "448">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1D8CA08E-EA98-4464-BAA1-9823E1E3A6CB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App/App Modules/Home/Favourite/Favourite Item Cell/FavouriteItemCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63F46E05-6C3C-4D0F-BC69-BEE33666FF4D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App/App Modules/Home/Favourite/Favourite Item Cell/FavouriteItemCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "intialUI()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

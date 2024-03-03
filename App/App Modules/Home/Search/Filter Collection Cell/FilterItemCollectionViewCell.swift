@@ -22,7 +22,7 @@ class FilterItemCollectionViewCell: UICollectionViewCell {
     }
     
     func configureUI(filter: Filters) {
-//        self.filterNameLabel.text = filter.filterName
+        self.filterNameLabel.text = filter.filterName
     }
     
     override func awakeFromNib() {

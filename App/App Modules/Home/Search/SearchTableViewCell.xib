@@ -11,64 +11,94 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="KGk-i7-Jjw" customClass="SearchTableViewCell" customModule="App" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="142" id="KGk-i7-Jjw" customClass="SearchTableViewCell" customModule="App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="142"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="142"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-rD-g2F">
-                        <rect key="frame" x="8" y="8" width="304" height="60"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EOU-1g-dZa">
+                        <rect key="frame" x="24" y="8" width="272" height="60"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="oAE-3k-ROR">
-                                <rect key="frame" x="16" y="16" width="272" height="28"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-rD-g2F">
+                                <rect key="frame" x="0.0" y="0.0" width="272" height="60"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Try &quot;Dubai&quot;" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pD6-fm-jIN">
-                                        <rect key="frame" x="0.0" y="0.0" width="220" height="28"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iq8-fE-ota">
-                                        <rect key="frame" x="232" y="4" width="40" height="20.666666666666668"/>
-                                        <color key="tintColor" systemColor="labelColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="RV1-1F-y1h"/>
-                                        </constraints>
-                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="small" weight="light"/>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="oAE-3k-ROR">
+                                        <rect key="frame" x="16" y="16" width="240" height="28"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Try &quot;Dubai&quot;" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pD6-fm-jIN">
+                                                <rect key="frame" x="0.0" y="0.0" width="204" height="28"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="iq8-fE-ota">
+                                                <rect key="frame" x="216" y="0.0" width="24" height="28"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="RV1-1F-y1h"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="small" weight="light"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="oAE-3k-ROR" firstAttribute="top" secondItem="BEy-rD-g2F" secondAttribute="top" constant="16" id="6W1-05-680"/>
+                                    <constraint firstItem="oAE-3k-ROR" firstAttribute="leading" secondItem="BEy-rD-g2F" secondAttribute="leading" constant="16" id="J7d-yW-mhO"/>
+                                    <constraint firstAttribute="bottom" secondItem="oAE-3k-ROR" secondAttribute="bottom" constant="16" id="Z4w-no-8Lw"/>
+                                    <constraint firstAttribute="trailing" secondItem="oAE-3k-ROR" secondAttribute="trailing" constant="16" id="lcq-a3-ITh"/>
+                                    <constraint firstAttribute="height" constant="60" id="xD4-mS-1bk"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" name="Outline"/>
                         <constraints>
-                            <constraint firstItem="oAE-3k-ROR" firstAttribute="top" secondItem="BEy-rD-g2F" secondAttribute="top" constant="16" id="6W1-05-680"/>
-                            <constraint firstItem="oAE-3k-ROR" firstAttribute="leading" secondItem="BEy-rD-g2F" secondAttribute="leading" constant="16" id="J7d-yW-mhO"/>
-                            <constraint firstAttribute="bottom" secondItem="oAE-3k-ROR" secondAttribute="bottom" constant="16" id="Z4w-no-8Lw"/>
-                            <constraint firstAttribute="trailing" secondItem="oAE-3k-ROR" secondAttribute="trailing" constant="16" id="lcq-a3-ITh"/>
-                            <constraint firstAttribute="height" constant="60" id="xD4-mS-1bk"/>
+                            <constraint firstAttribute="height" constant="60" id="EME-KZ-Ity"/>
                         </constraints>
-                    </view>
+                    </stackView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fc6-PW-bXu">
+                        <rect key="frame" x="0.0" y="84" width="320" height="50"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="wvY-Hk-NYF"/>
+                        </constraints>
+                        <inset key="scrollIndicatorInsets" minX="24" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="f8J-Lw-Le4">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="24" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="wmh-ll-09J"/>
+                            <outlet property="delegate" destination="-1" id="ijw-6j-VHp"/>
+                        </connections>
+                    </collectionView>
                 </subviews>
+                <color key="backgroundColor" name="Background"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="BEy-rD-g2F" secondAttribute="trailing" constant="8" id="RiX-NO-2Nf"/>
-                    <constraint firstItem="BEy-rD-g2F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="SDd-4d-wSe"/>
-                    <constraint firstItem="BEy-rD-g2F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="j3w-67-i6g"/>
-                    <constraint firstAttribute="bottom" secondItem="BEy-rD-g2F" secondAttribute="bottom" constant="8" id="s3Z-EZ-9ha"/>
+                    <constraint firstAttribute="trailing" secondItem="fc6-PW-bXu" secondAttribute="trailing" id="1vN-sC-Q4H"/>
+                    <constraint firstAttribute="bottom" secondItem="fc6-PW-bXu" secondAttribute="bottom" constant="16" id="8Ne-ox-TBF"/>
+                    <constraint firstAttribute="trailing" secondItem="EOU-1g-dZa" secondAttribute="trailing" constant="24" id="JoF-ys-Drh"/>
+                    <constraint firstItem="EOU-1g-dZa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="aai-ur-p9w"/>
+                    <constraint firstItem="fc6-PW-bXu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dZK-Ed-D7C"/>
+                    <constraint firstItem="EOU-1g-dZa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="gTo-VM-xYH"/>
+                    <constraint firstItem="fc6-PW-bXu" firstAttribute="top" secondItem="EOU-1g-dZa" secondAttribute="bottom" constant="16" id="wRp-Ht-t6n"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="collectionView" destination="fc6-PW-bXu" id="26m-ld-qct"/>
                 <outlet property="searchTextField" destination="pD6-fm-jIN" id="0dD-DT-A5l"/>
                 <outlet property="searchView" destination="BEy-rD-g2F" id="5uM-SS-Ogd"/>
             </connections>
-            <point key="canvasLocation" x="19.847328244274809" y="30.985915492957748"/>
+            <point key="canvasLocation" x="19.847328244274809" y="54.225352112676056"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <namedColor name="Outline">
-            <color red="0.89411764705882357" green="0.89411764705882357" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="search" width="24" height="24"/>
+        <namedColor name="Background">
+            <color red="0.90980392156862744" green="0.90980392156862744" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

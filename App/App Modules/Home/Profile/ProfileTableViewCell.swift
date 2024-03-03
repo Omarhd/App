@@ -9,9 +9,19 @@ import UIKit
 
 class ProfileTableViewCell: UITableViewCell {
 
+    // MARK: - Profile
+    @IBOutlet weak var greatingMessageLabel: UILabel!
+    @IBOutlet weak var userImage: UIImageView!
+    
+    // MARK: - Methods
+    fileprivate func intialUI() {
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        intialUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
