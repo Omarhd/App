@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     let presenter = HomePresenter()
 
     // MARK: - Properties
-    var dataSource: [SectionType] = [.profile, .search, .favourite(1), .nearYou(1)]
+    var dataSource: [SectionType] = [.profile, .search]
+    var isScrolling = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +28,10 @@ class ViewController: UIViewController {
         
         presenter.fetchMovies()
         
-        presenter.registerCells(tableView: tableView, Identifire: HeaderViewTableViewCell.viewIdentifier())
         presenter.registerCells(tableView: tableView, Identifire: ProfileTableViewCell.viewIdentifier())
         presenter.registerCells(tableView: tableView, Identifire: SearchTableViewCell.viewIdentifier())
-        presenter.registerCells(tableView: tableView, Identifire: FavouriteTableViewCell.viewIdentifier())
-        presenter.registerCells(tableView: tableView, Identifire: NearYouTableViewCell.viewIdentifier())
+        presenter.registerCells(tableView: tableView, Identifire: HeaderViewTableViewCell.viewIdentifier())
+        presenter.registerCells(tableView: tableView, Identifire: FavAndNearTableViewCell.viewIdentifier())
 
     }
 }
@@ -54,27 +54,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             return profileCell
             
         case .search:
-            return UITableViewCell()
-                        
-        case .favourite:
-            let favouriteCell = tableView.dequeueReusableCell(withIdentifier: FavouriteTableViewCell.viewIdentifier(), for: indexPath) as! FavouriteTableViewCell
-            favouriteCell.collectionView.reloadData()
-
-            return favouriteCell
+            let contentCell = tableView.dequeueReusableCell(withIdentifier: FavAndNearTableViewCell.viewIdentifier(), for: indexPath) as! FavAndNearTableViewCell
+            contentCell.tableView.reloadData()
             
-        case .nearYou:
-            let nearYouCell = tableView.dequeueReusableCell(withIdentifier: NearYouTableViewCell.viewIdentifier(), for: indexPath) as! NearYouTableViewCell
-            nearYouCell.configureUI()
-            
-            return nearYouCell
+            return contentCell
         }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let searchCell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.viewIdentifier()) as! SearchTableViewCell
-
-        let headerView = tableView.dequeueReusableCell(withIdentifier: HeaderViewTableViewCell.viewIdentifier()) as! HeaderViewTableViewCell
 
         switch dataSource[section] {
         case .profile:
@@ -83,18 +72,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         case .search:
             searchCell.collectionView.reloadData()
             return searchCell
-            
-        case .favourite(_):
-            let header = headerView
-            header.configureCellForFavSection()
-            return header
-            
-        case .nearYou(_):
-            headerView.configureCellForNearSection()
-            let header = headerView
-            
-            header.configureCellForNearSection()
-            return header
         }
     }
     
@@ -106,18 +83,56 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return dataSource[section].estimatedHeightForHeader
     }
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        switch dataSource[section] {
-        case .profile:
-            break
-        case .search:
-            print("hello sticky")
-        case .favourite(_):
-            print("hello mf")
-        case .nearYou(_):
-            print("hello mf")
+    func tableView(_ tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
+        return dataSource[section].estimatedHeightForHeader
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let headerRect = tableView.rectForHeader(inSection: 1)
+        if tableView.contentOffset.y >= headerRect.origin.y && tableView.contentOffset.y < headerRect.maxY {
+            if let headerView = tableView.headerView(forSection: 1) {
+                headerView.backgroundColor = UIColor.red
+            }
+        }
+        
+        guard isScrolling else {
+            return
+        }
+        
+        guard let tableView = scrollView as? UITableView else {
+            return
+        }
+        
+        // Check if the content offset has changed
+        guard scrollView.contentOffset != CGPoint.zero else {
+            // Content offset hasn't changed, likely due to initial layout
+            return
+        }
+        
+        // Check if the last cell is currently visible
+        if let lastIndexPath = tableView.indexPathsForVisibleRows?.last {
+            if lastIndexPath.section == tableView.numberOfSections - 1 && lastIndexPath.row == tableView.numberOfRows(inSection: lastIndexPath.section) - 1 {
+                if let lastCell = tableView.cellForRow(at: lastIndexPath) as? FavAndNearTableViewCell {
+                    lastCell.tableView.isScrollEnabled = true
+                }
+            }
         }
     }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isScrolling = true
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            isScrolling = false
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        isScrolling = false
+    }
+    
 }
 
 extension ViewController: HomeViewProtocol {

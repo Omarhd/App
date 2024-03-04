@@ -15,6 +15,7 @@ class NearYouTableViewCell: UITableViewCell {
     @IBOutlet weak var propertyDistanceLabel: UILabel!
     @IBOutlet weak var propertyIsLikedButton: UIButton!
     @IBOutlet weak var propertyPriceLabel: UILabel!
+    @IBOutlet weak var starsRatingStackView: UIStackView!
     
     // MARK: - Propertis
     
@@ -33,12 +34,27 @@ class NearYouTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         initailUI()
+        appendImagesToStackView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func appendImagesToStackView() {
+        // Append 5 images to the stack view
+        for i in 1...5 {
+            if let image = UIImage(systemName: "star.fill") {
+                let imageView = UIImageView(image: image)
+                imageView.contentMode = .scaleAspectFit
+                imageView.tintColor = .systemYellow
+                imageView.heightAnchor.constraint(equalToConstant: 18).isActive = true
+                imageView.widthAnchor.constraint(equalToConstant: 18).isActive = true
+                starsRatingStackView.addArrangedSubview(imageView)
+            }
+        }
     }
     
 }

@@ -10,8 +10,6 @@ import UIKit
 enum SectionType {
     case profile
     case search
-    case favourite(Int?)
-    case nearYou(Int?)
     
     var headerHeight: CGFloat {
         switch self {
@@ -19,8 +17,15 @@ enum SectionType {
             return 0.0
         case .search:
             return 140.0
-        case .favourite, .nearYou:
-            return 44.0
+        }
+    }
+    
+    var rowHeight: CGFloat {
+        switch self {
+        case .profile:
+            return 80.0
+        case .search:
+            return 1600.0
         }
     }
     
@@ -29,24 +34,54 @@ enum SectionType {
         case .profile:
             return 1
         case .search:
-            return 0
-        case .favourite(_):
             return 1
-        case .nearYou(_):
-            return 10
         }
     }
     
     var estimatedHeightForHeader: CGFloat {
         switch self {
         case .profile:
-            return 0
+            return 0.0
         case .search:
             return 12.0
-        case .favourite(_):
-            return 12.0
-        case .nearYou(_):
-            return 12.0
+        }
+    }
+    
+}
+
+
+enum FaveAndNear {
+    case favourite
+    case nearYou
+    
+    var headerHeight: CGFloat {
+        return 44.0
+    }
+    
+    var numberOfRowsInSection: Int {
+        switch self {
+        case .favourite:
+            return 1
+        case .nearYou:
+            return 10
+        }
+    }
+    
+    var estimatedHeightForHeader: CGFloat {
+        switch self {
+        case .favourite:
+            return 120.0
+        case .nearYou:
+            return 120.0
+        }
+    }
+    
+    var heightForRowInSection: CGFloat {
+        switch self {
+        case .favourite:
+            return 220.0
+        case .nearYou:
+            return 120.0
         }
     }
     

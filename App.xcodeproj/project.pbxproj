@@ -38,6 +38,10 @@
 		16FEBDA42B90790400708106 /* NearYouTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16FEBDA22B90790400708106 /* NearYouTableViewCell.xib */; };
 		16FEBDA82B90847300708106 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FEBDA62B90847300708106 /* SearchTableViewCell.swift */; };
 		16FEBDA92B90847300708106 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16FEBDA72B90847300708106 /* SearchTableViewCell.xib */; };
+		6A60A3EA2B95993500A5DB61 /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A60A3E92B95993500A5DB61 /* Favourites.storyboard */; };
+		6A60A3ED2B959A6B00A5DB61 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A60A3EC2B959A6B00A5DB61 /* CustomTabBarController.swift */; };
+		6A60A3F12B95C03C00A5DB61 /* FavAndNearTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A60A3EF2B95C03C00A5DB61 /* FavAndNearTableViewCell.swift */; };
+		6A60A3F22B95C03C00A5DB61 /* FavAndNearTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A60A3F02B95C03C00A5DB61 /* FavAndNearTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +78,10 @@
 		16FEBDA22B90790400708106 /* NearYouTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NearYouTableViewCell.xib; sourceTree = "<group>"; };
 		16FEBDA62B90847300708106 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		16FEBDA72B90847300708106 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		6A60A3E92B95993500A5DB61 /* Favourites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
+		6A60A3EC2B959A6B00A5DB61 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		6A60A3EF2B95C03C00A5DB61 /* FavAndNearTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavAndNearTableViewCell.swift; sourceTree = "<group>"; };
+		6A60A3F02B95C03C00A5DB61 /* FavAndNearTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavAndNearTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,13 +140,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		1630EE1A2B930968005C6B3B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		16F4DEBB2B9097B000FFE68D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +168,6 @@
 		16FEBD732B905C0100708106 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				1630EE1A2B930968005C6B3B /* Resources */,
 				1630EE132B930350005C6B3B /* Extensions */,
 				16FEBD8B2B905C3800708106 /* Network */,
 				16FEBD882B905C0A00708106 /* App */,
@@ -194,6 +194,7 @@
 				16FEBD7F2B905C0300708106 /* LaunchScreen.storyboard */,
 				16FEBD7A2B905C0100708106 /* Main.storyboard */,
 				16A7D7002B934B4C00E70DC3 /* Home.storyboard */,
+				6A60A3E92B95993500A5DB61 /* Favourites.storyboard */,
 				16A7D7082B94EF3600E70DC3 /* Notifications.storyboard */,
 				16A7D70A2B94EF5300E70DC3 /* Profile.storyboard */,
 			);
@@ -203,6 +204,7 @@
 		16FEBD8A2B905C2800708106 /* App Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6A60A3EB2B959A3700A5DB61 /* Tabbar */,
 				16FEBD942B905F4A00708106 /* Home */,
 			);
 			path = "App Modules";
@@ -222,11 +224,10 @@
 		16FEBD942B905F4A00708106 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				6A60A3EE2B95C01900A5DB61 /* Content View */,
 				1630EE062B90B503005C6B3B /* Header View */,
 				16F4DEBB2B9097B000FFE68D /* Profile */,
 				16FEBDA52B90845F00708106 /* Search */,
-				1630EDFC2B90A6AB005C6B3B /* Favourite */,
-				16FEBDA02B9078B300708106 /* NearYouTableViewCell */,
 				16FEBD782B905C0100708106 /* ViewController.swift */,
 				16FEBD952B905F5C00708106 /* HomePresenter.swift */,
 				16FEBD972B905FB200708106 /* Model.swift */,
@@ -252,6 +253,25 @@
 				16FEBDA72B90847300708106 /* SearchTableViewCell.xib */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		6A60A3EB2B959A3700A5DB61 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				6A60A3EC2B959A6B00A5DB61 /* CustomTabBarController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		6A60A3EE2B95C01900A5DB61 /* Content View */ = {
+			isa = PBXGroup;
+			children = (
+				1630EDFC2B90A6AB005C6B3B /* Favourite */,
+				16FEBDA02B9078B300708106 /* NearYouTableViewCell */,
+				6A60A3EF2B95C03C00A5DB61 /* FavAndNearTableViewCell.swift */,
+				6A60A3F02B95C03C00A5DB61 /* FavAndNearTableViewCell.xib */,
+			);
+			path = "Content View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +342,8 @@
 				16F4DEBF2B9097C700FFE68D /* ProfileTableViewCell.xib in Resources */,
 				16FEBD7C2B905C0100708106 /* Main.storyboard in Resources */,
 				16FEBDA92B90847300708106 /* SearchTableViewCell.xib in Resources */,
+				6A60A3F22B95C03C00A5DB61 /* FavAndNearTableViewCell.xib in Resources */,
+				6A60A3EA2B95993500A5DB61 /* Favourites.storyboard in Resources */,
 				16A7D7092B94EF3600E70DC3 /* Notifications.storyboard in Resources */,
 				1630EE122B92FAA5005C6B3B /* HeaderViewTableViewCell.xib in Resources */,
 				16A7D7052B94EC0D00E70DC3 /* FavouriteTableViewCell.xib in Resources */,
@@ -337,12 +359,14 @@
 			files = (
 				16FEBD982B905FB200708106 /* Model.swift in Sources */,
 				16FEBD8F2B905C6700708106 /* HTTPNetworkService.swift in Sources */,
+				6A60A3ED2B959A6B00A5DB61 /* CustomTabBarController.swift in Sources */,
 				16FEBDA32B90790400708106 /* NearYouTableViewCell.swift in Sources */,
 				16F4DEBE2B9097C700FFE68D /* ProfileTableViewCell.swift in Sources */,
 				16FEBD932B905CA000708106 /* APIClient.swift in Sources */,
 				16FEBD792B905C0100708106 /* ViewController.swift in Sources */,
 				16FEBD9A2B90740500708106 /* HomeData.swift in Sources */,
 				16FEBD752B905C0100708106 /* AppDelegate.swift in Sources */,
+				6A60A3F12B95C03C00A5DB61 /* FavAndNearTableViewCell.swift in Sources */,
 				16FEBD912B905C8D00708106 /* NetworkError.swift in Sources */,
 				1630EE112B92FAA5005C6B3B /* HeaderViewTableViewCell.swift in Sources */,
 				16FEBD772B905C0100708106 /* SceneDelegate.swift in Sources */,
@@ -512,6 +536,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -519,6 +544,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = mvvm.test.app.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -540,6 +568,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -547,6 +576,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = mvvm.test.app.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

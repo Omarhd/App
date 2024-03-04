@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -19,21 +20,21 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EOU-1g-dZa">
-                        <rect key="frame" x="24" y="8" width="272" height="60"/>
+                        <rect key="frame" x="24" y="8" width="272" height="70"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-rD-g2F">
-                                <rect key="frame" x="0.0" y="0.0" width="272" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="272" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="oAE-3k-ROR">
-                                        <rect key="frame" x="16" y="16" width="240" height="28"/>
+                                        <rect key="frame" x="16" y="8" width="240" height="54"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Try &quot;Dubai&quot;" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pD6-fm-jIN">
-                                                <rect key="frame" x="0.0" y="0.0" width="204" height="28"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="204" height="54"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="iq8-fE-ota">
-                                                <rect key="frame" x="216" y="0.0" width="24" height="28"/>
+                                                <rect key="frame" x="216" y="0.0" width="24" height="54"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="RV1-1F-y1h"/>
@@ -44,20 +45,20 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="oAE-3k-ROR" firstAttribute="top" secondItem="BEy-rD-g2F" secondAttribute="top" constant="16" id="6W1-05-680"/>
+                                    <constraint firstItem="oAE-3k-ROR" firstAttribute="top" secondItem="BEy-rD-g2F" secondAttribute="top" constant="8" id="6W1-05-680"/>
                                     <constraint firstItem="oAE-3k-ROR" firstAttribute="leading" secondItem="BEy-rD-g2F" secondAttribute="leading" constant="16" id="J7d-yW-mhO"/>
-                                    <constraint firstAttribute="bottom" secondItem="oAE-3k-ROR" secondAttribute="bottom" constant="16" id="Z4w-no-8Lw"/>
+                                    <constraint firstAttribute="bottom" secondItem="oAE-3k-ROR" secondAttribute="bottom" constant="8" id="Z4w-no-8Lw"/>
                                     <constraint firstAttribute="trailing" secondItem="oAE-3k-ROR" secondAttribute="trailing" constant="16" id="lcq-a3-ITh"/>
-                                    <constraint firstAttribute="height" constant="60" id="xD4-mS-1bk"/>
+                                    <constraint firstAttribute="height" constant="70" id="xD4-mS-1bk"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="EME-KZ-Ity"/>
+                            <constraint firstAttribute="height" constant="70" id="EME-KZ-Ity"/>
                         </constraints>
                     </stackView>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fc6-PW-bXu">
-                        <rect key="frame" x="0.0" y="84" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="94" width="320" height="50"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="wvY-Hk-NYF"/>

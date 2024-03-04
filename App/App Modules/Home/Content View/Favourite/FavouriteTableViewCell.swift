@@ -22,8 +22,9 @@ class FavouriteTableViewCell: UITableViewCell {
         
         collectionView.collectionViewLayout = layout
         
-        collectionView.register(FavouriteItemCollectionViewCell.self, forCellWithReuseIdentifier: FavouriteItemCollectionViewCell.viewIdentifier())
-        
+        let cellNib = UINib(nibName: FavouriteItemCollectionViewCell.viewIdentifier(), bundle: nil)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: FavouriteItemCollectionViewCell.viewIdentifier())
+
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.reloadData()

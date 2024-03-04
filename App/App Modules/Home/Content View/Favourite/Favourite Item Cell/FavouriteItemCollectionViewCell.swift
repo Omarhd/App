@@ -21,7 +21,8 @@ class FavouriteItemCollectionViewCell: UICollectionViewCell {
     // MARK: - Methods
     fileprivate func intialUI() {
         hotelImage.layer.cornerRadius = 12
-        viewersView.layer.cornerRadius = 8
+        viewersView.layer.cornerRadius = 12
+        viewersView.layer.borderWidth = 0.5
         viewersView.layer.borderColor = UIColor.white.cgColor
         
     }
