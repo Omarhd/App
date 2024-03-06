@@ -14,7 +14,7 @@ class FavAndNearTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     var dataSource: [FaveAndNear] = [.favourite, .nearYou]
-
+    weak var delegate: HomeViewProtocol?
     
     // MARK: - Methods
     fileprivate func initalUI() {
@@ -63,11 +63,14 @@ extension FavAndNearTableViewCell: UITableViewDelegate, UITableViewDataSource {
             
         case .nearYou:
             let nearYouCell = tableView.dequeueReusableCell(withIdentifier: NearYouTableViewCell.viewIdentifier(), for: indexPath) as! NearYouTableViewCell
-            nearYouCell.backgroundColor = .blue
             nearYouCell.configureUI()
             
             return nearYouCell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.didSelectItem(atIndex: indexPath.row, inCell: self)
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

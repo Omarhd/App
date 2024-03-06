@@ -25,7 +25,7 @@ enum SectionType {
         case .profile:
             return 80.0
         case .search:
-            return 1600.0
+            return 600.0
         }
     }
     

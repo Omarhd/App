@@ -17,7 +17,6 @@
 		16A7D7012B934B4C00E70DC3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A7D7002B934B4C00E70DC3 /* Home.storyboard */; };
 		16A7D7052B94EC0D00E70DC3 /* FavouriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16A7D7042B94EC0D00E70DC3 /* FavouriteTableViewCell.xib */; };
 		16A7D7072B94EC3200E70DC3 /* FavouriteItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16A7D7062B94EC3200E70DC3 /* FavouriteItemCollectionViewCell.xib */; };
-		16A7D7092B94EF3600E70DC3 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A7D7082B94EF3600E70DC3 /* Notifications.storyboard */; };
 		16A7D70B2B94EF5300E70DC3 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A7D70A2B94EF5300E70DC3 /* Profile.storyboard */; };
 		16F4DEBE2B9097C700FFE68D /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4DEBC2B9097C700FFE68D /* ProfileTableViewCell.swift */; };
 		16F4DEBF2B9097C700FFE68D /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F4DEBD2B9097C700FFE68D /* ProfileTableViewCell.xib */; };
@@ -38,10 +37,21 @@
 		16FEBDA42B90790400708106 /* NearYouTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16FEBDA22B90790400708106 /* NearYouTableViewCell.xib */; };
 		16FEBDA82B90847300708106 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FEBDA62B90847300708106 /* SearchTableViewCell.swift */; };
 		16FEBDA92B90847300708106 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16FEBDA72B90847300708106 /* SearchTableViewCell.xib */; };
+		6A148A4E2B984601006DA9E6 /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A148A4D2B984601006DA9E6 /* AlertsManager.swift */; };
+		6A148A512B98536D006DA9E6 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6A148A502B98536D006DA9E6 /* MessageKit */; };
+		6A148A542B98537B006DA9E6 /* InputBarAccessoryView in Frameworks */ = {isa = PBXBuildFile; productRef = 6A148A532B98537B006DA9E6 /* InputBarAccessoryView */; };
+		6A148A572B985393006DA9E6 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A148A562B985393006DA9E6 /* IQKeyboardManagerSwift */; };
+		6A148A5A2B9853C9006DA9E6 /* JDStatusBarNotification in Frameworks */ = {isa = PBXBuildFile; productRef = 6A148A592B9853C9006DA9E6 /* JDStatusBarNotification */; };
 		6A60A3EA2B95993500A5DB61 /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A60A3E92B95993500A5DB61 /* Favourites.storyboard */; };
 		6A60A3ED2B959A6B00A5DB61 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A60A3EC2B959A6B00A5DB61 /* CustomTabBarController.swift */; };
 		6A60A3F12B95C03C00A5DB61 /* FavAndNearTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A60A3EF2B95C03C00A5DB61 /* FavAndNearTableViewCell.swift */; };
 		6A60A3F22B95C03C00A5DB61 /* FavAndNearTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A60A3F02B95C03C00A5DB61 /* FavAndNearTableViewCell.xib */; };
+		6AAA2C682B972718000FECC6 /* StretchyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAA2C672B972718000FECC6 /* StretchyHeaderView.swift */; };
+		6AAA2C6A2B975584000FECC6 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAA2C692B975584000FECC6 /* ImageLoader.swift */; };
+		6AAA2C712B983F40000FECC6 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAA2C702B983F40000FECC6 /* WebSocketManager.swift */; };
+		6AAA2C732B983FBF000FECC6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AAA2C722B983FBF000FECC6 /* Chat.storyboard */; };
+		6AAA2C762B98402C000FECC6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAA2C752B98402C000FECC6 /* ChatViewController.swift */; };
+		6AAA2C782B984047000FECC6 /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAA2C772B984047000FECC6 /* ChatPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,11 +65,10 @@
 		16A7D7002B934B4C00E70DC3 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		16A7D7042B94EC0D00E70DC3 /* FavouriteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavouriteTableViewCell.xib; sourceTree = "<group>"; };
 		16A7D7062B94EC3200E70DC3 /* FavouriteItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavouriteItemCollectionViewCell.xib; sourceTree = "<group>"; };
-		16A7D7082B94EF3600E70DC3 /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		16A7D70A2B94EF5300E70DC3 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		16F4DEBC2B9097C700FFE68D /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		16F4DEBD2B9097C700FFE68D /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
-		16FEBD712B905C0100708106 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16FEBD712B905C0100708106 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = App.app; path = "/Users/iosdev/Documents/App/build/Debug-iphoneos/App.app"; sourceTree = "<absolute>"; };
 		16FEBD742B905C0100708106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16FEBD762B905C0100708106 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		16FEBD782B905C0100708106 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,10 +87,17 @@
 		16FEBDA22B90790400708106 /* NearYouTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NearYouTableViewCell.xib; sourceTree = "<group>"; };
 		16FEBDA62B90847300708106 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		16FEBDA72B90847300708106 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		6A148A4D2B984601006DA9E6 /* AlertsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsManager.swift; sourceTree = "<group>"; };
 		6A60A3E92B95993500A5DB61 /* Favourites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
 		6A60A3EC2B959A6B00A5DB61 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		6A60A3EF2B95C03C00A5DB61 /* FavAndNearTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavAndNearTableViewCell.swift; sourceTree = "<group>"; };
 		6A60A3F02B95C03C00A5DB61 /* FavAndNearTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavAndNearTableViewCell.xib; sourceTree = "<group>"; };
+		6AAA2C672B972718000FECC6 /* StretchyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderView.swift; sourceTree = "<group>"; };
+		6AAA2C692B975584000FECC6 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		6AAA2C702B983F40000FECC6 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
+		6AAA2C722B983FBF000FECC6 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		6AAA2C752B98402C000FECC6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		6AAA2C772B984047000FECC6 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +105,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A148A5A2B9853C9006DA9E6 /* JDStatusBarNotification in Frameworks */,
+				6A148A572B985393006DA9E6 /* IQKeyboardManagerSwift in Frameworks */,
+				6A148A512B98536D006DA9E6 /* MessageKit in Frameworks */,
+				6A148A542B98537B006DA9E6 /* InputBarAccessoryView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,21 +173,14 @@
 			isa = PBXGroup;
 			children = (
 				16FEBD732B905C0100708106 /* App */,
-				16FEBD722B905C0100708106 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		16FEBD722B905C0100708106 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				16FEBD712B905C0100708106 /* App.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		16FEBD732B905C0100708106 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				6A148A4C2B984548006DA9E6 /* Alerts */,
+				6AAA2C5D2B970BB6000FECC6 /* Side Menu */,
 				1630EE132B930350005C6B3B /* Extensions */,
 				16FEBD8B2B905C3800708106 /* Network */,
 				16FEBD882B905C0A00708106 /* App */,
@@ -195,8 +208,8 @@
 				16FEBD7A2B905C0100708106 /* Main.storyboard */,
 				16A7D7002B934B4C00E70DC3 /* Home.storyboard */,
 				6A60A3E92B95993500A5DB61 /* Favourites.storyboard */,
-				16A7D7082B94EF3600E70DC3 /* Notifications.storyboard */,
 				16A7D70A2B94EF5300E70DC3 /* Profile.storyboard */,
+				6AAA2C722B983FBF000FECC6 /* Chat.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -206,6 +219,7 @@
 			children = (
 				6A60A3EB2B959A3700A5DB61 /* Tabbar */,
 				16FEBD942B905F4A00708106 /* Home */,
+				6AAA2C742B98400C000FECC6 /* Chat */,
 			);
 			path = "App Modules";
 			sourceTree = "<group>";
@@ -213,10 +227,8 @@
 		16FEBD8B2B905C3800708106 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				16FEBD8C2B905C4D00708106 /* Protocols.swift */,
-				16FEBD8E2B905C6700708106 /* HTTPNetworkService.swift */,
-				16FEBD902B905C8D00708106 /* NetworkError.swift */,
-				16FEBD922B905CA000708106 /* APIClient.swift */,
+				6AAA2C6F2B983F21000FECC6 /* Web Socket */,
+				6AAA2C6E2B983F1A000FECC6 /* HTTP */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -224,6 +236,7 @@
 		16FEBD942B905F4A00708106 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				6AAA2C5E2B971CE6000FECC6 /* TableView Header */,
 				6A60A3EE2B95C01900A5DB61 /* Content View */,
 				1630EE062B90B503005C6B3B /* Header View */,
 				16F4DEBB2B9097B000FFE68D /* Profile */,
@@ -255,6 +268,14 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		6A148A4C2B984548006DA9E6 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				6A148A4D2B984601006DA9E6 /* AlertsManager.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
 		6A60A3EB2B959A3700A5DB61 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +295,50 @@
 			path = "Content View";
 			sourceTree = "<group>";
 		};
+		6AAA2C5D2B970BB6000FECC6 /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Side Menu";
+			sourceTree = "<group>";
+		};
+		6AAA2C5E2B971CE6000FECC6 /* TableView Header */ = {
+			isa = PBXGroup;
+			children = (
+				6AAA2C672B972718000FECC6 /* StretchyHeaderView.swift */,
+			);
+			path = "TableView Header";
+			sourceTree = "<group>";
+		};
+		6AAA2C6E2B983F1A000FECC6 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				16FEBD8C2B905C4D00708106 /* Protocols.swift */,
+				16FEBD8E2B905C6700708106 /* HTTPNetworkService.swift */,
+				16FEBD902B905C8D00708106 /* NetworkError.swift */,
+				16FEBD922B905CA000708106 /* APIClient.swift */,
+				6AAA2C692B975584000FECC6 /* ImageLoader.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		6AAA2C6F2B983F21000FECC6 /* Web Socket */ = {
+			isa = PBXGroup;
+			children = (
+				6AAA2C702B983F40000FECC6 /* WebSocketManager.swift */,
+			);
+			path = "Web Socket";
+			sourceTree = "<group>";
+		};
+		6AAA2C742B98400C000FECC6 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				6AAA2C752B98402C000FECC6 /* ChatViewController.swift */,
+				6AAA2C772B984047000FECC6 /* ChatPresenter.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,6 +355,12 @@
 			dependencies = (
 			);
 			name = App;
+			packageProductDependencies = (
+				6A148A502B98536D006DA9E6 /* MessageKit */,
+				6A148A532B98537B006DA9E6 /* InputBarAccessoryView */,
+				6A148A562B985393006DA9E6 /* IQKeyboardManagerSwift */,
+				6A148A592B9853C9006DA9E6 /* JDStatusBarNotification */,
+			);
 			productName = App;
 			productReference = 16FEBD712B905C0100708106 /* App.app */;
 			productType = "com.apple.product-type.application";
@@ -318,7 +389,13 @@
 				Base,
 			);
 			mainGroup = 16FEBD682B905C0100708106;
-			productRefGroup = 16FEBD722B905C0100708106 /* Products */;
+			packageReferences = (
+				6A148A4F2B98536D006DA9E6 /* XCRemoteSwiftPackageReference "MessageKit" */,
+				6A148A522B98537B006DA9E6 /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */,
+				6A148A552B985393006DA9E6 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				6A148A582B9853C9006DA9E6 /* XCRemoteSwiftPackageReference "JDStatusBarNotification" */,
+			);
+			productRefGroup = 16FEBD682B905C0100708106;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -335,6 +412,7 @@
 				16FEBD812B905C0300708106 /* LaunchScreen.storyboard in Resources */,
 				16A7D7012B934B4C00E70DC3 /* Home.storyboard in Resources */,
 				16FEBD7E2B905C0300708106 /* Assets.xcassets in Resources */,
+				6AAA2C732B983FBF000FECC6 /* Chat.storyboard in Resources */,
 				16A7D7072B94EC3200E70DC3 /* FavouriteItemCollectionViewCell.xib in Resources */,
 				1630EDFB2B909F65005C6B3B /* FilterItemCollectionViewCell.xib in Resources */,
 				16A7D70B2B94EF5300E70DC3 /* Profile.storyboard in Resources */,
@@ -344,7 +422,6 @@
 				16FEBDA92B90847300708106 /* SearchTableViewCell.xib in Resources */,
 				6A60A3F22B95C03C00A5DB61 /* FavAndNearTableViewCell.xib in Resources */,
 				6A60A3EA2B95993500A5DB61 /* Favourites.storyboard in Resources */,
-				16A7D7092B94EF3600E70DC3 /* Notifications.storyboard in Resources */,
 				1630EE122B92FAA5005C6B3B /* HeaderViewTableViewCell.xib in Resources */,
 				16A7D7052B94EC0D00E70DC3 /* FavouriteTableViewCell.xib in Resources */,
 			);
@@ -365,17 +442,23 @@
 				16FEBD932B905CA000708106 /* APIClient.swift in Sources */,
 				16FEBD792B905C0100708106 /* ViewController.swift in Sources */,
 				16FEBD9A2B90740500708106 /* HomeData.swift in Sources */,
+				6AAA2C682B972718000FECC6 /* StretchyHeaderView.swift in Sources */,
 				16FEBD752B905C0100708106 /* AppDelegate.swift in Sources */,
+				6AAA2C762B98402C000FECC6 /* ChatViewController.swift in Sources */,
 				6A60A3F12B95C03C00A5DB61 /* FavAndNearTableViewCell.swift in Sources */,
 				16FEBD912B905C8D00708106 /* NetworkError.swift in Sources */,
 				1630EE112B92FAA5005C6B3B /* HeaderViewTableViewCell.swift in Sources */,
 				16FEBD772B905C0100708106 /* SceneDelegate.swift in Sources */,
 				1630EDFA2B909F65005C6B3B /* FilterItemCollectionViewCell.swift in Sources */,
 				1630EE152B93036A005C6B3B /* UIView.swift in Sources */,
+				6AAA2C6A2B975584000FECC6 /* ImageLoader.swift in Sources */,
 				16FEBDA82B90847300708106 /* SearchTableViewCell.swift in Sources */,
 				16FEBD8D2B905C4D00708106 /* Protocols.swift in Sources */,
+				6A148A4E2B984601006DA9E6 /* AlertsManager.swift in Sources */,
 				1630EE042B90A826005C6B3B /* FavouriteItemCollectionViewCell.swift in Sources */,
 				16FEBD962B905F5C00708106 /* HomePresenter.swift in Sources */,
+				6AAA2C712B983F40000FECC6 /* WebSocketManager.swift in Sources */,
+				6AAA2C782B984047000FECC6 /* ChatPresenter.swift in Sources */,
 				1630EDFF2B90A6D0005C6B3B /* FavouriteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +520,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -500,6 +584,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -528,28 +613,29 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2C4XF58Z9A;
+				DEVELOPMENT_TEAM = A96Z4D8RAQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mvvm.test.app.App;
+				PRODUCT_BUNDLE_IDENTIFIER = mvvm.test.app.Apps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -560,28 +646,29 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2C4XF58Z9A;
+				DEVELOPMENT_TEAM = A96Z4D8RAQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mvvm.test.app.App;
+				PRODUCT_BUNDLE_IDENTIFIER = mvvm.test.app.Apps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -607,6 +694,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6A148A4F2B98536D006DA9E6 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = exactVersion;
+				version = 4.2.0;
+			};
+		};
+		6A148A522B98537B006DA9E6 /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nathantannar4/InputBarAccessoryView.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.3.0;
+			};
+		};
+		6A148A552B985393006DA9E6 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = exactVersion;
+				version = 7.0.1;
+			};
+		};
+		6A148A582B9853C9006DA9E6 /* XCRemoteSwiftPackageReference "JDStatusBarNotification" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/calimarkus/JDStatusBarNotification";
+			requirement = {
+				kind = exactVersion;
+				version = 2.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6A148A502B98536D006DA9E6 /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A148A4F2B98536D006DA9E6 /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+		6A148A532B98537B006DA9E6 /* InputBarAccessoryView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A148A522B98537B006DA9E6 /* XCRemoteSwiftPackageReference "InputBarAccessoryView" */;
+			productName = InputBarAccessoryView;
+		};
+		6A148A562B985393006DA9E6 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A148A552B985393006DA9E6 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		6A148A592B9853C9006DA9E6 /* JDStatusBarNotification */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A148A582B9853C9006DA9E6 /* XCRemoteSwiftPackageReference "JDStatusBarNotification" */;
+			productName = JDStatusBarNotification;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 16FEBD692B905C0100708106 /* Project object */;
 }

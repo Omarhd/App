@@ -13,11 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
   
     // MARK: - Presenter
-    let presenter = HomePresenter()
+    private let presenter = HomePresenter()
 
     // MARK: - Properties
-    var dataSource: [SectionType] = [.profile, .search]
-    var isScrolling = false
+    private var dataSource: [SectionType] = [.profile, .search]
+    private var isScrolling = false
+    private var headerView: UIView!
+    private var headerVisible = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,9 @@ class ViewController: UIViewController {
         presenter.registerCells(tableView: tableView, Identifire: SearchTableViewCell.viewIdentifier())
         presenter.registerCells(tableView: tableView, Identifire: HeaderViewTableViewCell.viewIdentifier())
         presenter.registerCells(tableView: tableView, Identifire: FavAndNearTableViewCell.viewIdentifier())
+
+        headerView = StretchyHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 200)) // Adjust the height according to your preference
+        tableView.addSubview(headerView)
 
     }
 }
@@ -55,6 +60,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             
         case .search:
             let contentCell = tableView.dequeueReusableCell(withIdentifier: FavAndNearTableViewCell.viewIdentifier(), for: indexPath) as! FavAndNearTableViewCell
+            contentCell.delegate = self
             contentCell.tableView.reloadData()
             
             return contentCell
@@ -88,11 +94,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let headerRect = tableView.rectForHeader(inSection: 1)
+        let offsetY = scrollView.contentOffset.y
+        
+        let headerRect = tableView.rectForHeader(inSection: 0)
         if tableView.contentOffset.y >= headerRect.origin.y && tableView.contentOffset.y < headerRect.maxY {
-            if let headerView = tableView.headerView(forSection: 1) {
-                headerView.backgroundColor = UIColor.red
-            }
+            headerView = tableView.headerView(forSection: 0)
         }
         
         guard isScrolling else {
@@ -103,19 +109,22 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             return
         }
         
-        // Check if the content offset has changed
         guard scrollView.contentOffset != CGPoint.zero else {
-            // Content offset hasn't changed, likely due to initial layout
             return
         }
         
-        // Check if the last cell is currently visible
         if let lastIndexPath = tableView.indexPathsForVisibleRows?.last {
             if lastIndexPath.section == tableView.numberOfSections - 1 && lastIndexPath.row == tableView.numberOfRows(inSection: lastIndexPath.section) - 1 {
                 if let lastCell = tableView.cellForRow(at: lastIndexPath) as? FavAndNearTableViewCell {
                     lastCell.tableView.isScrollEnabled = true
                 }
             }
+        }
+        
+        if offsetY <= -50 && !headerVisible {
+            showHeaderView()
+        } else if offsetY > -50 && headerVisible {
+            hideHeaderView()
         }
     }
     
@@ -133,16 +142,43 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         isScrolling = false
     }
     
+    func showHeaderView() {
+        UIView.animate(withDuration: 0.3) {
+            let headerHeight: CGFloat = 180 // Adjust the header height as needed
+            let insetTop = headerHeight + self.tableView.safeAreaInsets.top
+            self.tableView.contentInset = UIEdgeInsets(top: insetTop, left: 0, bottom: 0, right: 0)
+            self.headerView.frame.origin.y = -headerHeight
+            self.headerVisible = true
+        }
+    }
+
+    func hideHeaderView() {
+        UIView.animate(withDuration: 0.3) {
+            let insetTop = self.tableView.safeAreaInsets.top
+            self.tableView.contentInset = UIEdgeInsets(top: insetTop, left: 0, bottom: 0, right: 0)
+            self.headerView.frame.origin.y = 0
+            self.headerVisible = false
+        }
+    }
+    
 }
 
 extension ViewController: HomeViewProtocol {
-   
-    func displayData(_ data: Movies) {
+    
+    func didSelectItem(atIndex index: Int, inCell cell: UITableViewCell) {
+        print(index)
+    }
+    
+    func displayData(_ data: AllPosts) {
         print(data)
     }
     
     func displayError(_ error: Error) {
-        print(error)
+        AlertManager.shared.showErrorAlert(message: error.localizedDescription)
+    }
+    
+    func receiveImage(_ image: UIImage) {
+        
     }
     
 }

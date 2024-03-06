@@ -43,20 +43,20 @@
             </objects>
             <point key="canvasLocation" x="-192" y="420"/>
         </scene>
-        <!--Notifications-->
+        <!--Profile-->
         <scene sceneID="ZJ5-8w-VU9">
             <objects>
-                <viewControllerPlaceholder storyboardName="Notifications" id="D5v-ka-R9l" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Profile" id="D5v-ka-R9l" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="T2I-nz-CSm"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WD4-7i-1EY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="264" y="420"/>
         </scene>
-        <!--Profile-->
+        <!--Chat-->
         <scene sceneID="NCB-Vb-qgp">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="d3I-Bj-A9B" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Chat" id="d3I-Bj-A9B" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ckb-6Z-ryP"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Zy-PR-WsI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

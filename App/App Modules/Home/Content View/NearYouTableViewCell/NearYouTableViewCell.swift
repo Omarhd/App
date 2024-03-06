@@ -18,7 +18,7 @@ class NearYouTableViewCell: UITableViewCell {
     @IBOutlet weak var starsRatingStackView: UIStackView!
     
     // MARK: - Propertis
-    
+    weak var delegate: HomeViewProtocol?
     
     // MARK: - Methods
     fileprivate func initailUI() {
@@ -34,7 +34,7 @@ class NearYouTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         initailUI()
-        appendImagesToStackView()
+        appendImagesToStackView(rating: 4)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -43,18 +43,38 @@ class NearYouTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func appendImagesToStackView() {
+    func appendImagesToStackView(rating: Double) {
+        // Remove any existing subviews from the stack view
+        for subview in starsRatingStackView.arrangedSubviews {
+            starsRatingStackView.removeArrangedSubview(subview)
+            subview.removeFromSuperview()
+        }
+        
+        let emptyStarImage = UIImage(systemName: "star")
+        let fullStarImage = UIImage(systemName: "star.fill")
+        let halfStarImage = UIImage(systemName: "star.leadinghalf.filled")
+        
         // Append 5 images to the stack view
         for i in 1...5 {
-            if let image = UIImage(systemName: "star.fill") {
+            var image: UIImage?
+            if Double(i) <= rating {
+                image = fullStarImage
+            } else if Double(i) - rating == 0.5 {
+                image = halfStarImage
+            } else {
+                image = emptyStarImage
+            }
+            
+            if let image = image {
                 let imageView = UIImageView(image: image)
                 imageView.contentMode = .scaleAspectFit
-                imageView.tintColor = .systemYellow
+                imageView.tintColor = rating >= Double(i) ? .systemYellow : .systemGray
                 imageView.heightAnchor.constraint(equalToConstant: 18).isActive = true
                 imageView.widthAnchor.constraint(equalToConstant: 18).isActive = true
                 starsRatingStackView.addArrangedSubview(imageView)
             }
         }
     }
+
     
 }
